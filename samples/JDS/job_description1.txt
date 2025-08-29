@@ -1,0 +1,9 @@
+Job: Data Engineer
+
+Responsibilities:
+- Build and maintain data pipelines
+- Develop ETL processes and workflows
+- Work with cloud technologies
+
+Required Skills:
+Python, SQL, Airflow, ETL, AWS, Spark, data pipelines, performance optimization

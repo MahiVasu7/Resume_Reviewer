@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Reviewer</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f6f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .container { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 500px; }
+        h1 { text-align: center; margin-bottom: 20px; color: #333; }
+        label { font-weight: bold; display: block; margin-top: 15px; }
+        input, textarea, button {
+            width: 100%; padding: 10px; margin-top: 5px;
+            border: 1px solid #ccc; border-radius: 6px; font-size: 14px;
+        }
+        button {
+            background: #4CAF50; color: white; border: none; cursor: pointer; margin-top: 20px;
+        }
+        button:hover { background: #45a049; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📄 Resume Reviewer</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="resume">Upload Resume</label>
+            <input type="file" name="resume" accept=".pdf,.docx,.txt" required>
+
+            <label for="job_description">Paste Job Description</label>
+            <textarea name="job_description" rows="6" placeholder="Paste the job description here..." required></textarea>
+
+            <button type="submit">Analyze Resume</button>
+        </form>
+    </div>
+</body>
+</html>

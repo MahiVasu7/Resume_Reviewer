@@ -1,0 +1,9 @@
+Job: Software Developer
+
+Responsibilities:
+- Develop web applications and REST APIs
+- Implement backend services
+- Collaborate with cross-functional teams
+
+Required Skills:
+Java, Spring Boot, SQL, REST APIs, HTML, CSS, JavaScript, Git

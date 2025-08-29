@@ -1,0 +1,128 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Analysis Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9fafc;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .highlight {
+            background: #eef6ff;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .good { color: green; }
+        .bad { color: red; }
+        .score {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .progress {
+            background: #eee;
+            border-radius: 8px;
+            height: 20px;
+            overflow: hidden;
+            margin: 8px 0 20px;
+        }
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            text-align: right;
+            padding-right: 5px;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background: #3498db;
+            padding: 10px 18px;
+            border-radius: 6px;
+        }
+        .back:hover {
+            background: #2c80b4;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>📊 Resume Analysis Result</h2>
+
+    <!-- Skills -->
+    <div class="section">
+        <h3>💼 Skills</h3>
+        <div class="highlight">
+            <b>Your Resume Skills:</b> {{ resume_skills|join(", ") }} <br><br>
+            <b>Job Description Skills:</b> {{ job_skills|join(", ") }} <br><br>
+            <b>Matched Skills ✅:</b> {% if matched %} {{ matched|join(", ") }} {% else %} No matches {% endif %} <br><br>
+            <b>Missing Skills ❌:</b> {% if missing %} {{ missing|join(", ") }} {% else %} None {% endif %}
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+        <h3>🎓 Education</h3>
+        <div class="highlight">
+            <b>Your Resume Education:</b> {% if resume_edu %} {{ resume_edu|join(", ") }} {% else %} None detected {% endif %} <br><br>
+            <b>Job Description Education:</b> {% if jd_edu %} {{ jd_edu|join(", ") }} {% else %} None detected {% endif %} <br><br>
+            <b>Matched Education ✅:</b> {% if edu_match %} {{ edu_match }} {% else %} No matches {% endif %} <br><br>
+            <b>Missing Education ❌:</b> {% if jd_edu %} {{ jd_edu|join(", ") }} {% else %} None {% endif %}
+        </div>
+    </div>
+
+    <!-- Score -->
+    <div class="section">
+        <h3>📈 Score</h3>
+        <div class="score">Resume Match Score: {{ score }}%</div>
+        <div class="progress">
+            <div class="progress-bar" style="width: {{ score }}%">{{ score }}%</div>
+        </div>
+    </div>
+
+    <!-- Suggestions -->
+    <div class="section">
+        <h3>💡 Suggestions</h3>
+        <div class="highlight">
+            {% if suggestions %}
+                <ul>
+                    {% for s in suggestions %}
+                        <li>{{ s }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                No suggestions. Great work!
+            {% endif %}
+        </div>
+    </div>
+
+    <a class="back" href="/">⬅ Go Back</a>
+</div>
+</body>
+</html>

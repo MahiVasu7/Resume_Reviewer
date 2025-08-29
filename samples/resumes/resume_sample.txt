@@ -1,0 +1,13 @@
+John Doe
+Summary:
+Passionate data engineer with 2 years experience building data pipelines.
+
+Education:
+B.Tech in Computer Science — 2019
+
+Experience:
+- Built ETL pipelines using Python and Airflow.
+- Optimized SQL queries, reduced runtime by 40%.
+
+Skills:
+Python, SQL, Airflow, AWS S3, Linux

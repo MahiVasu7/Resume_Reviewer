@@ -1,0 +1,17 @@
+John Doe
+Email: john.doe@example.com
+Phone: 123-456-7890
+
+Summary:
+Motivated data engineer with experience in Python, SQL, and cloud technologies.
+
+Skills:
+Python, SQL, Airflow, AWS S3, Linux, ETL, Spark
+
+Experience:
+Data Engineer at ABC Corp (2022 - Present)
+- Developed ETL pipelines using Python and Airflow
+- Managed AWS S3 buckets and data workflows
+
+Education:
+Bachelor of Technology in Computer Science

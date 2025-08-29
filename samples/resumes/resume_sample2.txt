@@ -1,0 +1,17 @@
+Jane Smith
+Email: jane.smith@example.com
+Phone: 987-654-3210
+
+Profile:
+Experienced software developer with strong analytical skills.
+
+Technical Skills:
+Java, Spring Boot, SQL, REST APIs, HTML, CSS, JavaScript
+
+Projects:
+- Online Slot Booking System using Spring Boot and MySQL
+- Developed RESTful APIs for student fee management
+
+Certifications:
+- Oracle Java Certification
+- AWS Cloud Practitioner
